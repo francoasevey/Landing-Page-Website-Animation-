@@ -148,10 +148,23 @@
             top: 100px;
             left: 100px;
             border-radius: 50px;
+            opacity: 0;
+            animation: stone 7s ease 0s infinite;
+        }
+        @keyframes stone{
+            from{
+                transform: translateY(-500%);
+                opacity: 1;
+            }
+            to{
+                transform: translateY(500%);
+                opacity: .3;
+            }
         }
         .stone:nth-child(2){
             top: 300px;
             left: 400px;
+            
         }
         .stone:nth-child(3){
             top: 500px;
@@ -175,6 +188,10 @@
         .stone:nth-child(7){
             top: 0;
             left: 45%;
+        }
+        .stone:nth-child(even){
+            background: linear-gradient(to top, #384fde, transparent);
+            box-shadow: 0 4px 94px #384fde;
         }
     </style>
 </head>
